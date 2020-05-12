@@ -15,3 +15,24 @@
 */
 
 // YOUR CODE HERE
+let word = "supercalifragilisticexpialidocious";
+let letter = 'b';
+let guess = document.querySelector('#guess');
+
+let count = 0
+let index = 0
+
+while (index < word.length) {
+   console.log(word[index])
+   if (letter === word[index]) {
+      count += 1
+   }
+   index += 1
+}
+if (count === 1) {
+   guess.innerHTML = "the letter " + letter + "exists " + count + "time in this word"
+}
+else {
+   guess.innerHTML = "the letter " + letter + " exists " + count + " times in this word";
+}
+console.log(count)
